@@ -6,8 +6,8 @@
 // @description  YouTubeの動画概要欄を自動で展開します（MutationObserver対応版）
 // @author       Red Frame X
 // @match        https://www.youtube.com/*
-// @updateURL    https://gist.githubusercontent.com/Red-Frame-X/ad3fbb3d9fa68055cc5874fba8f81261/raw/YouTube%2520Description%2520Auto%2520Expander%2520(SPA%2520Support).user.js
-// @downloadURL  https://gist.githubusercontent.com/Red-Frame-X/ad3fbb3d9fa68055cc5874fba8f81261/raw/YouTube%2520Description%2520Auto%2520Expander%2520(SPA%2520Support).user.js
+// @updateURL    https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex/blob/main/YouTube%20Description%20Auto%20Expander%20(SPA%20Support).user.js
+// @downloadURL  https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex/blob/main/YouTube%20Description%20Auto%20Expander%20(SPA%20Support).user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @grant        none
 // ==/UserScript==
