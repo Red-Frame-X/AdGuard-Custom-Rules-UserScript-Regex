@@ -1,1 +1,1 @@
-# AdGuard-Custom-Rules-UserScript-Regex
+# AdGuard Custom Rules UserScript Regex
