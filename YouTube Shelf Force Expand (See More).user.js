@@ -6,8 +6,8 @@
 // @description  YouTubeのシェルフの「もっと見る」を強制的に展開しボタンを隠す
 // @author       Red Frame X
 // @match        https://www.youtube.com/*
-// @updateURL    https://gist.githubusercontent.com/Red-Frame-X/87245d8a196db1030fae9d81d305fad0/raw/YouTube%2520Shelf%2520Force%2520Expand%2520(See%2520More).user.js
-// @downloadURL  https://gist.githubusercontent.com/Red-Frame-X/87245d8a196db1030fae9d81d305fad0/raw/YouTube%2520Shelf%2520Force%2520Expand%2520(See%2520More).user.js
+// @updateURL    https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex/raw/main/YouTube%20Shelf%20Force%20Expand%20(See%20More).user.js
+// @downloadURL  https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex/raw/main/YouTube%20Shelf%20Force%20Expand%20(See%20More).user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @grant        GM_addStyle
 // @run-at       document-start
