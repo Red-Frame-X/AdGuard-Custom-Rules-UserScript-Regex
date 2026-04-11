@@ -1,0 +1,224 @@
+! Title: AdGuard User Rules - Red Frame X
+! Description: Customize AdGuard filters for personal use.
+! Homepage: https://gist.github.com/Red-Frame-X
+! Subscribe: https://gist.githubusercontent.com/Red-Frame-X/1838a9511d99e711bb1d70f665aacef3/raw/AdGuard%2520User%2520Rules%2520-%2520Red%2520Frame%2520X.txt
+! License: CC0 (Public Domain)
+! Version: 20260405
+
+! 汎用ルール
+! 広告・迷惑要素の非表示・許可
+##.grecaptcha-badge
+@@||data.service.paypal.com^$important
+@@||www.google-analytics.com^$important
+
+! アプリ・システム用ルール
+! トラッキング・広告関連の許可
+@@||ads.x.com^$app=com.adguard.system
+@@||ads.youtube.com^$app=com.adguard.system
+@@||googleads.g.doubleclick.net^$app=com.adguard.system
+@@||aax-fe.amazon-adsystem.com^$app=com.amazon.mShop.android.shopping
+@@||searchnotifications-pa.googleapis.com^$app=com.google.android.googlequicksearchbox
+@@||ads.twitter.com^$app=com.twitter.android
+@@||analytics.tiktok.com^$app=jp.kappasushi.app
+@@||google-analytics.com^$app=jp.kappasushi.app
+@@||static.ads-twitter.com^$app=jp.kappasushi.app
+@@||static.ads-x.com^$app=jp.kappasushi.app
+@@||stats.g.doubleclick.net^$app=jp.kappasushi.app
+@@||uts-front.line-apps.com^$app=jp.naver.line.android
+
+! blog.hatena.ne.jp
+! 広告・迷惑要素の非表示
+blog.hatena.ne.jp##.admin-subscribe-heading
+blog.hatena.ne.jp##.antenna-circle-list
+blog.hatena.ne.jp##.globalPage-ad
+blog.hatena.ne.jp##.js-admin-subscribe-recommended-wrapper
+blog.hatena.ne.jp##.recommendList-wrapper
+blog.hatena.ne.jp##aside.antenna-staffPicks
+
+! google.com,google.co.jp
+! 検索結果のクリーンアップ
+google.com,google.co.jp##.yf:has(div[data-container-id="model-response-placeholder"])
+google.com,google.co.jp##div[data-hveid]:has(> div > [role="heading"]:contains(ショート動画))
+google.com,google.co.jp##div[data-hveid]:has(> div > div > [role="heading"]:contains(他の人はこちらも検索))
+google.com,google.co.jp##div[data-hveid]:has(> div > div > [role="heading"]:contains(関連する質問))
+google.com,google.co.jp##div[data-hveid]:not([id]):has(h2:contains(こちらを検索しますか))
+google.com,google.co.jp##div[data-lhcontainer]:has([role="heading"]:contains(AI による概要))
+google.com,google.co.jp##div[data-ved]:has(> div > div > [role="heading"]:contains(関連する質問))
+google.com,google.co.jp##div[role="listitem"]:has(a[href*="udm=39"] span:contains(ショート動画))
+
+! m.youtube.com
+! UI・各セクションの非表示
+m.youtube.com##.YtmCompactChannelRendererFeedItem
+m.youtube.com##chips-shelf-with-video-shelf-renderer
+m.youtube.com##div[class^="ytm-live-chat-"]
+m.youtube.com##grid-shelf-view-model:has([href*="/shorts/"])
+m.youtube.com##ytm-backstage-post-renderer
+m.youtube.com##ytm-comment-section-renderer
+m.youtube.com##ytm-item-section-renderer:has(.ytCarouselTitleViewModelTitle:contains(コメント))
+m.youtube.com##ytm-item-section-renderer[section-identifier="comments-entry-point"]
+m.youtube.com##ytm-live-chat-renderer
+m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
+m.youtube.com##ytm-rich-section-renderer
+m.youtube.com##ytm-video-with-context-renderer:has(.big-shorts-singleton)
+
+! news.google.com
+! UI・不要セクションの非表示
+news.google.com##[role="tab"][aria-label="エンタメ"]
+news.google.com##[role="tab"][aria-label="科学＆テクノロジー"]
+news.google.com##[role="tab"][aria-label="スポーツ"]
+news.google.com##[role="tab"][aria-label="ビジネス"]
+news.google.com##.TPqh7b:contains(ショーケース)
+news.google.com##div[jsname="UXbvIb"]:contains(ショーケース)
+news.google.com##button[aria-label="候補 - ニュース提供元"]
+
+! officeforest.org
+! 広告・迷惑要素の非表示
+officeforest.org##div[id^="offic-"]
+
+! old.klz9.com,klto9.com,jestful.net
+! ウィジェット・コメント要素の非表示
+old.klz9.com,klto9.com,jestful.net##.title_doctruyen:contains(Recent Comments)
+old.klz9.com,klto9.com,jestful.net##div:has(> div#show_new_comment)
+
+! pantieshub.net
+! スクリプトレット処理
+pantieshub.net#%#//scriptlet("set-constant", "hls", "emptyObj")
+
+! rawkuma.net
+! サードパーティ・迷惑要素のブロック
+||cbox.ws^$third-party,domain=rawkuma.net
+rawkuma.net##iframe[src*="cbox.ws"]
+rawkuma.net##a[href*="discord.gg"]:has(img)
+rawkuma.net##a[href*="ko-fi.com"]:has(img)
+
+! topics.smt.docomo.ne.jp
+! 広告・トラッキングのブロック
+||alxc.addlv.smt.docomo.ne.jp^$script,domain=topics.smt.docomo.ne.jp
+topics.smt.docomo.ne.jp##.ad_middle05
+
+! translate.google.com
+! UI要素の非表示
+translate.google.com##[role="tab"][data-language-code="ko"]
+
+! web.nhk
+! クッキー・同意ポップアップ関連処理
+||apps.web.nhk/ops/api/v1/common/registrationEnforcement.json$xhr
+web.nhk#%#//scriptlet('trusted-set-cookie', 'consentToUse', '{"status":"optedin","entity":"household","area":{"areaId":"130","jisx0402":"13113","postal":"1508001","pref":"13"}}')
+web.nhk#%#//scriptlet('trusted-set-cookie', 'efm', '{"sd":"2025-10-01T00:00:00.000Z","ed":"2050-12-31T23:59:59.999Z"}')
+
+! www.youtube.com
+! 表示調整：Enhancer for YouTube™ 併用・フォント・スクロール
+www.youtube.com###metadata-line.ytd-video-meta-block:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
+www.youtube.com###teaser-carousel:contains(チャットのリプレイ)
+www.youtube.com###video-title.ytd-rich-grid-media, #video-title.ytd-rich-grid-slim-media:style(font-size: 1.4rem !important; line-height: 2rem !important;)
+www.youtube.com###ytd-channel-renderer
+www.youtube.com##[page-subtype="channels"] ytd-item-section-renderer:not([use-height-hack]):has(ytd-reel-shelf-renderer)
+www.youtube.com##[page-subtype="home"] ytd-rich-item-renderer:has(#video-title-link:contains(/#short/i))
+www.youtube.com##[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"])
+www.youtube.com##body, ytd-app[scrolling]:style(overflow-x: hidden !important;)
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-section-renderer
+www.youtube.com##ytd-guide-entry-renderer:has(a[title="ショート"])
+www.youtube.com##ytd-guide-section-renderer:has(#guide-section-title:contains(YouTube の他のサービス))
+www.youtube.com##ytd-mini-guide-entry-renderer:has(a[href="/shorts/"])
+www.youtube.com##ytd-reel-shelf-renderer
+www.youtube.com##ytd-search ytd-item-section-renderer > #contents > :not(ytd-video-renderer, ytd-channel-renderer, ytd-playlist-renderer, ytd-radio-renderer)
+www.youtube.com##ytd-search ytd-secondary-search-container-renderer
+www.youtube.com##ytd-watch-metadata #teaser-carousel
+www.youtube.com##ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer:has(a[href^="/shorts/"])
+
+! x.com
+! ナビゲーション：左サイドバー・メニュー
+x.com##a[data-testid="AppTabBar_DirectMessage_Link"]
+x.com##a[href$="/lists"][role="link"]
+x.com##a[href="/i/chat"][role="link"]
+x.com##a[href="/i/jf/creators/studio"][role="link"]
+x.com##a[href="/i/monetization"][role="link"]
+x.com##a[href="/i/premium"][role="link"]
+x.com##a[href="/i/premium_sign_up"]
+x.com##a[href="/i/spaces/start"][role="link"]
+x.com##a[href="/i/verified-orgs-signup"][role="link"]
+x.com##a[href^="/i/jf/creators/studio"]
+x.com##a[href^="/i/verified-orgs-signup"]
+! ナビゲーション：タブ・ヘッダー
+x.com##a[role="tab"][href*="/explore/tabs/entertainment"]
+x.com##a[role="tab"][href*="/explore/tabs/sports"]
+x.com##div[role="presentation"]:has(> a[href$="/articles"])
+x.com##div[role="presentation"]:has(> a[href$="/highlights"])
+x.com##div[role="presentation"]:has(> a[href="/explore/tabs/entertainment"])
+x.com##div[role="presentation"]:has(> a[href="/explore/tabs/sports"])
+x.com##div[role="presentation"]:has(div[role="tab"] span:contains(おすすめ))
+! サイドバー：右カラム
+x.com##[data-testid="sidebarColumn"] a[href="/i/premium_sign_up"]
+x.com##aside[aria-label="関連性の高いアカウント"]
+x.com##div:has(> aside[aria-label="おすすめユーザー"])
+x.com##div:has(> div[data-testid="news_sidebar"])
+x.com##div:has(> section > div[aria-label="タイムライン: 速報"])
+! UI全般：Premium・ドロワー・バッジ・分析
+x.com##a[href*="/i/premium_tier_switch"]
+x.com##div[aria-label*="認証済みバッジを獲得する"]
+x.com##div[data-testid="DMDrawer"]
+x.com##div[data-testid="UserName"] a[href="/i/premium_sign_up"][style]
+x.com##div[data-testid="analytics-preview"]
+x.com##div[data-testid="chat-drawer-root"]
+x.com##div[data-testid="verified_profile_visitor_upsell"]
+x.com##div:has(> a[href="/i/premium_sign_up"])
+x.com##div:has(> div > img[src*="premium-badge-card"])
+x.com##div:has(a[href$="/verified-profile-visits"])
+! 機能：AI (Grok) 関連
+x.com##[aria-label="Grokのアクション"]
+x.com##[aria-label="プロフィールの要約"]
+x.com##button:contains(grok.comにアクセスするとさらに多くの機能が利用できます):has(svg)
+x.com##button[data-testid="grokImgGen"]
+x.com##div[data-testid="GrokDrawer"]
+x.com##div[data-testid="inlinePrompt"]
+! タイムライン：広告・トピック・トレンド・おすすめユーザー
+x.com##[data-testid="cellInnerDiv"]:has(a[href^="/i/connect_people"])
+x.com##[data-testid="cellInnerDiv"]:has(a[href^="/i/topics/"])
+x.com##[data-testid="cellInnerDiv"]:has(button[data-testid="UserCell"] span:contains(/さんがフォローしています/))
+x.com##[data-testid="cellInnerDiv"]:has(button[data-testid="UserCell"] span:contains(/人がフォローしています/))
+x.com##[data-testid="cellInnerDiv"]:has(button[data-testid="UserCell"] span:contains(さんがフォローしています))
+x.com##[data-testid="cellInnerDiv"]:has(button[data-testid="UserCell"] span:contains(人がフォローしています))
+x.com##[data-testid="cellInnerDiv"]:has(div[data-testid="eventHero"])
+x.com##[data-testid="cellInnerDiv"]:has(h2:contains(おすすめ投稿))
+x.com##[data-testid="cellInnerDiv"]:has(h2[role="heading"] span:contains(おすすめユーザー))
+x.com##[data-testid="cellInnerDiv"]:has(img[src*="global_trending_card_newest.png"])
+x.com##[data-testid="cellInnerDiv"]:has(span:contains(によるプロモーション))
+x.com##[data-testid="cellInnerDiv"]:has(span:contains(関連性の高いユーザー))
+x.com##a[href^="https://ads.x.com/"]
+x.com##a[href^="https://ads.x.com"][role="link"]
+x.com##div[aria-label="タイムライン: Relevant people"]
+x.com##div[data-testid="cellInnerDiv"]:has(a[href^="/i/connect_people"])
+x.com##div:has(> a[href^="/i/jf/"][href$="/home"])
+! タイムライン：ホーム・Explore（複雑な条件）
+x.com##[aria-label^="タイムライン: ホーム"] div[data-testid="cellInnerDiv"]:has(+ div [data-testid="UserCell"]):not([aria-label="タイムライン: フォロー中"] *)
+x.com##[aria-label^="タイムライン: ホーム"] div[data-testid="cellInnerDiv"]:has([data-testid="UserCell"]):not([aria-label="タイムライン: フォロー中"] *)
+x.com##[aria-label^="タイムライン: ホーム"] div[data-testid="cellInnerDiv"]:has(a[href^="/i/connect_people"]) + div:has(> div > div:empty):not([aria-label="タイムライン: フォロー中"] *)
+x.com##[aria-label="タイムライン: 話題を検索"] div[data-testid="cellInnerDiv"]:has(button[data-testid="UserCell"] svg[data-testid="icon-verified"])
+x.com##[aria-label="タイムライン: 話題を検索"] div[data-testid="cellInnerDiv"]:has(h2:contains(おすすめユーザー))
+x.com##[data-testid="UserCell"]:has([data-testid$="-follow"] span:contains(フォロー)):not(:is([aria-label="タイムライン: 認証済みのフォロワー"], [aria-label="タイムライン: フォロワー"], [aria-label="タイムライン: フォロー中"], [aria-label="タイムライン: フォローする"], [aria-label="タイムライン: タイムラインを検索"]) *)
+x.com##div[data-testid="cellInnerDiv"]:not(:is([aria-label="タイムライン: 認証済みのフォロワー"], [aria-label="タイムライン: フォロワー"], [aria-label="タイムライン: フォロー中"]) *):has([data-testid="UserCell"]):has([data-testid$="-follow"])
+x.com##div[data-testid="cellInnerDiv"]:not(:is([aria-label^="タイムライン: ホーム"], [aria-label="タイムライン: 認証済みのフォロワー"], [aria-label="タイムライン: フォロー中"], [aria-label*="コミュニティ"], [aria-label="タイムライン: 通知"], [aria-label="タイムライン: 会話"], [aria-label^="タイムライン: "][aria-label$="さんのポスト"], [aria-label="タイムライン: タイムラインを検索"], [aria-label="タイムライン: フォロワー"], [aria-label="タイムライン: フォローする"], [aria-label="タイムライン: ポスト通知"]) *):has(button[data-testid="UserCell"] svg[data-testid="icon-verified"])
+! タイムライン：個別ポスト・会話・検索結果
+x.com##[aria-label$="さんのポスト"] div[data-testid="cellInnerDiv"]:has(+ div [data-testid="UserCell"])
+x.com##[aria-label$="さんのポスト"] div[data-testid="cellInnerDiv"]:has([data-testid="UserCell"])
+x.com##[aria-label$="さんのポスト"] div[data-testid="cellInnerDiv"]:has(a[href^="/i/connect_people"]) + div:has(> div > div:empty)
+x.com##div[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:contains(もっと見つける))
+x.com##div[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:contains(もっと見つける)) ~ div
+x.com##div[data-testid="cellInnerDiv"]:has(h2[role="heading"] > div span:contains(ユーザー))
+! コミュニティ関連
+x.com##[aria-label="タイムライン: タイムラインを検索"] [data-testid="cellInnerDiv"]:has(+ div > div > div > a[href^="/i/communities/"])
+x.com##[aria-label="タイムライン: タイムラインを検索"] [data-testid="cellInnerDiv"]:has(> div > div > a[href^="/i/communities/"])
+x.com##div[aria-label="タイムライン: コミュニティ"] div[data-testid="cellInnerDiv"]:has(a[href="/i/communities/suggested"])
+x.com##div[aria-label="タイムライン: コミュニティ"] div[data-testid="cellInnerDiv"]:has(span:contains(新しいコミュニティを見つける))
+x.com##div[aria-label="タイムライン: コミュニティ"] div[data-testid="cellInnerDiv"]:not(:has(article)):has(a[href^="/i/communities/"])
+x.com##div[data-testid="cellInnerDiv"]:has(h2[role="heading"]:contains(コミュニティを探す))
+! 高度なブロック処理：Scriptlet・スパム対策
+||twitter.undefined^$popup,domain=x.com
+||x.com/*.php*$popup,domain=x.com
+x.com##[data-testid="primaryColumn"] [data-testid="cellInnerDiv"] > div:has([data-testid$="-impression-pixel"])
+x.com##a[href="https://twitter.undefined/"]
+x.com##article[data-testid="tweet"] a[href^="https://linkneverdiel.com"]
+x.com#%#//scriptlet("json-prune", "promotedMetadata")
+x.com#%#//scriptlet("prevent-window-open", "/\\.php\\b.*_blank/")
+x.com#%#//scriptlet("prevent-window-open", "twitter.undefined")
