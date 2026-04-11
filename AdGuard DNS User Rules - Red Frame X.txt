@@ -1,7 +1,6 @@
 ! Title: AdGuard DNS User Rules - Red Frame X
 ! Description: Rules for Modifying the AdGuard DNS filter.
 ! Homepage: https://gist.github.com/Red-Frame-X
-
 ! License: CC0 (Public Domain)
 ! Version: 20260405
 
