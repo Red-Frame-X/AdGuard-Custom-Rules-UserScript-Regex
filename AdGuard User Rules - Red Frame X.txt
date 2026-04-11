@@ -1,7 +1,6 @@
 ! Title: AdGuard User Rules - Red Frame X
 ! Description: Customize AdGuard filters for personal use.
 ! Homepage: https://gist.github.com/Red-Frame-X
-
 ! License: CC0 (Public Domain)
 ! Version: 20260405
 
