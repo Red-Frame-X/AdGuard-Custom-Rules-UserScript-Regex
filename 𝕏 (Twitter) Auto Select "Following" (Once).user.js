@@ -14,8 +14,6 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-
-
 (function() {
     'use strict';
 
