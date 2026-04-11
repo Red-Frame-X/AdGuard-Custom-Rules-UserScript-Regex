@@ -1,7 +1,7 @@
 ! Title: How to Use Gists
 ! Description 1: AdGuard｜uBlacklist > カスタムフィルタの登録
 ! Description 2: Tampermonkey｜Violentmonkey > UserScriptの登録
-! Homepage: https://gist.github.com/Red-Frame-X
+! Homepage: https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex
 ! License: CC0 (Public Domain)
 ! Version: 20260222
 
