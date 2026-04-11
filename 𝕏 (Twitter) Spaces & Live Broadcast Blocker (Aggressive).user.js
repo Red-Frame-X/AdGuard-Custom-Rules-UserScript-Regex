@@ -7,8 +7,8 @@
 // @author       Red Frame X
 // @match        https://x.com/*
 // @match        https://twitter.com/*
-// @updateURL    https://gist.githubusercontent.com/Red-Frame-X/fd3285886384db963a6d3f11b0b3a22d/raw/%25F0%259D%2595%258F%2520(Twitter)%2520Spaces%2520&%2520Live%2520Broadcast%2520Blocker%2520(Aggressive).user.js
-// @downloadURL  https://gist.githubusercontent.com/Red-Frame-X/fd3285886384db963a6d3f11b0b3a22d/raw/%25F0%259D%2595%258F%2520(Twitter)%2520Spaces%2520&%2520Live%2520Broadcast%2520Blocker%2520(Aggressive).user.js
+// @updateURL    https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex/raw/main/%F0%9D%95%8F%20(Twitter)%20Spaces%20%26%20Live%20Broadcast%20Blocker%20(Aggressive).user.js
+// @downloadURL  https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex/raw/main/%F0%9D%95%8F%20(Twitter)%20Spaces%20%26%20Live%20Broadcast%20Blocker%20(Aggressive).user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=x.com
 // @grant        none
 // @run-at       document-idle
