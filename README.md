@@ -1,5 +1,5 @@
 # AdGuard Custom Rules UserScript Regex
-* AdGuard カスタムルール
+* AdGuardカスタムルール
 * ユーザースクリプト
 * 正規表現
 
