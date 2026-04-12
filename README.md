@@ -1,7 +1,7 @@
 # AdGuard Custom Rules UserScript Regex
 * AdGuardカスタムルール
 * ユーザースクリプト
-* 正規表現
+* ChMate NG Word用 正規表現
 
 ### Contact
 * **User Name**：Red Frame X
