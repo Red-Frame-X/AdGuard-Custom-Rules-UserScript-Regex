@@ -12,14 +12,14 @@
 
 ! アプリ・システム用ルール
 ! トラッキング・広告関連の許可
+@@||aax-fe.amazon-adsystem.com^$app=com.amazon.mShop.android.shopping
+@@||ads.twitter.com^$app=com.twitter.android
 @@||ads.x.com^$app=com.adguard.system
 @@||ads.youtube.com^$app=com.adguard.system
-@@||googleads.g.doubleclick.net^$app=com.adguard.system
-@@||aax-fe.amazon-adsystem.com^$app=com.amazon.mShop.android.shopping
-@@||searchnotifications-pa.googleapis.com^$app=com.google.android.googlequicksearchbox
-@@||ads.twitter.com^$app=com.twitter.android
 @@||analytics.tiktok.com^$app=jp.kappasushi.app
 @@||google-analytics.com^$app=jp.kappasushi.app
+@@||googleads.g.doubleclick.net^$app=com.adguard.system
+@@||searchnotifications-pa.googleapis.com^$app=com.google.android.googlequicksearchbox
 @@||static.ads-twitter.com^$app=jp.kappasushi.app
 @@||static.ads-x.com^$app=jp.kappasushi.app
 @@||stats.g.doubleclick.net^$app=jp.kappasushi.app
@@ -33,6 +33,10 @@ blog.hatena.ne.jp##.globalPage-ad
 blog.hatena.ne.jp##.js-admin-subscribe-recommended-wrapper
 blog.hatena.ne.jp##.recommendList-wrapper
 blog.hatena.ne.jp##aside.antenna-staffPicks
+
+! deepl.com
+! 迷惑要素の非表示
+deepl.com##[id^="headlessui-dialog-panel-"]:contains(セッションの有効期間が切れました)
 
 ! google.com,google.co.jp
 ! 検索結果のクリーンアップ
@@ -53,8 +57,8 @@ m.youtube.com##div[class^="ytm-live-chat-"]
 m.youtube.com##grid-shelf-view-model:has([href*="/shorts/"])
 m.youtube.com##ytm-backstage-post-renderer
 m.youtube.com##ytm-comment-section-renderer
-m.youtube.com##ytm-item-section-renderer:has(.ytCarouselTitleViewModelTitle:contains(コメント))
 m.youtube.com##ytm-item-section-renderer[section-identifier="comments-entry-point"]
+m.youtube.com##ytm-item-section-renderer:has(.ytCarouselTitleViewModelTitle:contains(コメント))
 m.youtube.com##ytm-live-chat-renderer
 m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
 m.youtube.com##ytm-rich-section-renderer
@@ -62,13 +66,13 @@ m.youtube.com##ytm-video-with-context-renderer:has(.big-shorts-singleton)
 
 ! news.google.com
 ! UI・不要セクションの非表示
+news.google.com##.TPqh7b:contains(ショーケース)
 news.google.com##[role="tab"][aria-label="エンタメ"]
-news.google.com##[role="tab"][aria-label="科学＆テクノロジー"]
 news.google.com##[role="tab"][aria-label="スポーツ"]
 news.google.com##[role="tab"][aria-label="ビジネス"]
-news.google.com##.TPqh7b:contains(ショーケース)
-news.google.com##div[jsname="UXbvIb"]:contains(ショーケース)
+news.google.com##[role="tab"][aria-label="科学＆テクノロジー"]
 news.google.com##button[aria-label="候補 - ニュース提供元"]
+news.google.com##div[jsname="UXbvIb"]:contains(ショーケース)
 
 ! officeforest.org
 ! 広告・迷惑要素の非表示
@@ -79,8 +83,6 @@ officeforest.org##div[id^="offic-"]
 old.klz9.com,klto9.com,jestful.net##.title_doctruyen:contains(Recent Comments)
 old.klz9.com,klto9.com,jestful.net##div:has(> div#show_new_comment)
 
-deepl.com##[id^="headlessui-dialog-panel-"]:contains(セッションの有効期間が切れました)
-
 ! pantieshub.net
 ! スクリプトレット処理
 pantieshub.net#%#//scriptlet("set-constant", "hls", "emptyObj")
@@ -88,9 +90,9 @@ pantieshub.net#%#//scriptlet("set-constant", "hls", "emptyObj")
 ! rawkuma.net
 ! サードパーティ・迷惑要素のブロック
 ||cbox.ws^$third-party,domain=rawkuma.net
-rawkuma.net##iframe[src*="cbox.ws"]
 rawkuma.net##a[href*="discord.gg"]:has(img)
 rawkuma.net##a[href*="ko-fi.com"]:has(img)
+rawkuma.net##iframe[src*="cbox.ws"]
 
 ! topics.smt.docomo.ne.jp
 ! 広告・トラッキングのブロック
