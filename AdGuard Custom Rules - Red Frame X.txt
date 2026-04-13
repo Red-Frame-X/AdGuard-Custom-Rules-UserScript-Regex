@@ -79,7 +79,7 @@ officeforest.org##div[id^="offic-"]
 old.klz9.com,klto9.com,jestful.net##.title_doctruyen:contains(Recent Comments)
 old.klz9.com,klto9.com,jestful.net##div:has(> div#show_new_comment)
 
-
+deepl.com##[id^="headlessui-dialog-panel-"]:contains(セッションの有効期間が切れました)
 
 ! pantieshub.net
 ! スクリプトレット処理
