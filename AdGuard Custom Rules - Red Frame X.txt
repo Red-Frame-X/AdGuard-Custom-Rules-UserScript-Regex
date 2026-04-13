@@ -38,6 +38,7 @@ blog.hatena.ne.jp##aside.antenna-staffPicks
 ! 迷惑要素の非表示
 deepl.com##[id^="headlessui-dialog-panel-"]:contains(セッションの有効期間が切れました)
 
+
 ! google.com,google.co.jp
 ! 検索結果のクリーンアップ
 google.com,google.co.jp##.yf:has(div[data-container-id="model-response-placeholder"])
