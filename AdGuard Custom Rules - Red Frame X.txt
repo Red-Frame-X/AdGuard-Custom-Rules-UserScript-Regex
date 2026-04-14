@@ -34,10 +34,6 @@ blog.hatena.ne.jp##.js-admin-subscribe-recommended-wrapper
 blog.hatena.ne.jp##.recommendList-wrapper
 blog.hatena.ne.jp##aside.antenna-staffPicks
 
-! www.deepl.com
-! 許可ルール
-@@||feature-flagging.deepl.com/v1/rgstr$domain=deepl.com
-
 ! google.com,google.co.jp
 ! 検索結果のクリーンアップ
 google.com,google.co.jp##.yf:has(div[data-container-id="model-response-placeholder"])
