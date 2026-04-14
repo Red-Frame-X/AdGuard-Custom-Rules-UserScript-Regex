@@ -35,6 +35,7 @@ blog.hatena.ne.jp##.recommendList-wrapper
 blog.hatena.ne.jp##aside.antenna-staffPicks
 
 ! www.deepl.com
+! 許可ルール
 @@||feature-flagging.deepl.com/v1/rgstr$domain=deepl.com
 
 ! google.com,google.co.jp
