@@ -2,6 +2,7 @@
 * AdGuardカスタムルール
 * ユーザースクリプト
 * ChMate NG Word用 正規表現
+* その他メモ
 
 ### Contact
 * **User Name**：Red Frame X
