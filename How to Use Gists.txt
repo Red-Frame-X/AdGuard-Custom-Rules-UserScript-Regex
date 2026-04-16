@@ -1,9 +1,9 @@
 ! Title: How to Use Gists
-! Description 1: AdGuard｜uBlacklist > カスタムフィルタの登録
-! Description 2: Tampermonkey｜Violentmonkey > UserScriptの登録
+! Description 1: AdGuard > カスタムフィルタの登録
+! Description 2: Tampermonkey > UserScriptの登録
 ! Homepage: https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex
 ! License: CC0 (Public Domain)
-! Version: 20260222
+! Version: 20260416
 
 Description 1:
 - AdGuard > カスタムフィルタの登録
@@ -23,14 +23,14 @@ Description 1:
 5. この短縮URLをAdGuardの「カスタムフィルタ」として登録します
 
 6. 今後フィルタを更新する際は、ファイル内の ! Version: の数値を、前回登録時より大きく書き換えてください（例：2024010101 → 2024010201）
-   数値が増えていることでAdGuard｜uBlacklistが変更を検知し、自動更新が行われます
+   数値が増えていることでAdGuardが変更を検知し、自動更新が行われます
    
-※ 変更したルールは反映されようだが、フィルタの! Version（更新日）が古い日付のままのことが多いです
+※ 変更したルールは反映されるようですが、フィルタの! Version（更新日）が古い日付のままのことが多いです
 
 --------------------------------------------------------------------------------------
 
 Description 2:
-- Tampermonkey｜Violentmonkey > UserScriptの登録
+- Tampermonkey > UserScriptの登録
 
 1. GitHub Gistsで対象ファイルの [Raw] ボタンをクリックします
 
@@ -44,7 +44,7 @@ Description 2:
 
 4. 短縮したURLをブラウザで開き直し、最新の内容が表示されるか確認してください
 
-5. この短縮URLをTampermonkey｜Violentmonkeyの管理画面の「URLからインポート」する欄へ貼り付けるか、直接開いて「インストール」します
+5. この短縮URLをTampermonkeyの管理画面の「URLからインポート」する欄へ貼り付けるか、直接開いて「インストール」します
 
 6. 今後スクリプトを更新する際は、コード内の @version の数値を、前回登録時より大きく書き換えてください（例：1.0 → 1.1）
    数値が増えていることで拡張機能が変更を検知し、自動更新が行われます
