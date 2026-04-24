@@ -2,7 +2,7 @@
 ! Description: Rules for Modifying the AdGuard DNS filter.
 ! Homepage: https://github.com/Red-Frame-X/AdGuard-Custom-Rules-UserScript-Regex
 ! License: CC0 (Public Domain)
-! Version: 20260405
+! Version: 202604
 
 @@||a-adq.mediation.unity3d.com^|
 @@||ad.doubleclick.net^|
