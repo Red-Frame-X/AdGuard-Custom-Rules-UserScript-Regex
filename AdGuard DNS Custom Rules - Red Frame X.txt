@@ -78,3 +78,5 @@
 ||tanuki.5ch.net^$dnsrewrite=tanuki.5ch.io
 ||uplift.5ch.net^$dnsrewrite=uplift.5ch.io
 ||www.5ch.net^$dnsrewrite=www.5ch.io
+||ad-shield.cc^
+||html-load.cc^
