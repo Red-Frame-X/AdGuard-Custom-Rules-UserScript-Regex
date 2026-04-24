@@ -4,6 +4,8 @@
 ! License: CC0 (Public Domain)
 ! Version: 20260424
 
+||ad-shield.cc^
+||html-load.cc^
 @@||a-adq.mediation.unity3d.com^|
 @@||ad.doubleclick.net^|
 @@||ad2.trafficgate.net^|
@@ -78,5 +80,3 @@
 ||tanuki.5ch.net^$dnsrewrite=tanuki.5ch.io
 ||uplift.5ch.net^$dnsrewrite=uplift.5ch.io
 ||www.5ch.net^$dnsrewrite=www.5ch.io
-||ad-shield.cc^
-||html-load.cc^
